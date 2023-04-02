@@ -18,9 +18,9 @@ function renderLicenseBadge(license)
 }
 
 
-// function generateMarkdown(data) {
-// return `
-// # ${data.title} Why is this function not working?
+function generateMarkdown(data) {
+return `
+# ${data.title} 
  
 ## Description
 ${data.Description}

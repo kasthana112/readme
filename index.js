@@ -6,14 +6,18 @@ const questions = require('./utils/questions');
 
 
 function init() {
-    inquirer.prompt(questions).then((answers)
+
+    inquirer.prompt(questions).then((answers) => {
+
+    fs.writeFile('README.md', generateMarkdown(answers), (err) =>
+    err? console.log(err) : console.log('Success!')
     )}
 
-    fs.writeFile('README.md', generateMarkdown(), (err) =>
-    err? console.log(err) : console.log('Success!')
+    )}
 
 
-    );
+
+
 
     
 init();
